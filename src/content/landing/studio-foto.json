@@ -1,0 +1,84 @@
+{
+  "id": "studio-foto",
+  "name": "Studio Foto Indah",
+  "tagline": "Studio Foto Profesional untuk Momen Spesial Anda",
+  "description": "Studio foto dengan peralatan modern dan fotografer berpengalaman untuk mengabadikan momen-momen berharga Anda.",
+  "hero": {
+    "title": "Studio Foto Indah",
+    "subtitle": "Abadikan momen berharga Anda dengan kualitas profesional dan hasil yang memukau",
+    "cta": "Booking Session",
+    "image": "/landing/studio-foto-hero.jpg"
+  },
+  "colors": {
+    "primary": "#7c3aed",
+    "secondary": "#5b21b6",
+    "accent": "#f3f4f6"
+  },
+  "services": [
+    {
+      "name": "Foto Prewedding",
+      "description": "Paket foto prewedding dengan berbagai konsep",
+      "price": "Mulai Rp 2.500.000",
+      "icon": "💍"
+    },
+    {
+      "name": "Foto Keluarga",
+      "description": "Foto keluarga dengan suasana yang hangat",
+      "price": "Mulai Rp 800.000",
+      "icon": "👨‍👩‍👧‍👦"
+    },
+    {
+      "name": "Foto Produk",
+      "description": "Foto produk untuk kebutuhan bisnis",
+      "price": "Mulai Rp 500.000",
+      "icon": "📸"
+    },
+    {
+      "name": "Foto Event",
+      "description": "Dokumentasi acara dan event",
+      "price": "Mulai Rp 1.500.000",
+      "icon": "🎉"
+    }
+  ],
+  "whyUs": [
+    "Fotografer berpengalaman 8+ tahun",
+    "Peralatan kamera profesional",
+    "Studio indoor dan outdoor",
+    "Editing foto berkualitas tinggi",
+    "Hasil foto dalam 3-5 hari"
+  ],
+  "testimonials": [
+    {
+      "name": "Rudi Hartono",
+      "role": "Pengantin Baru",
+      "content": "Foto prewedding kami sangat bagus! Fotografernya kreatif dan hasilnya memukau. Highly recommended!",
+      "rating": 5
+    },
+    {
+      "name": "Maya Indah",
+      "role": "Pemilik Toko Online",
+      "content": "Foto produk untuk toko online saya sangat profesional. Penjualan meningkat drastis setelah ganti foto.",
+      "rating": 5
+    }
+  ],
+  "contact": {
+    "phone": "+62 812-3456-7890",
+    "whatsapp": "+62 812-3456-7890",
+    "address": "Jl. Sudirman No. 123, Jakarta Pusat",
+    "hours": "Senin - Minggu: 09:00 - 18:00 WIB"
+  },
+  "faq": [
+    {
+      "question": "Berapa lama proses editing foto?",
+      "answer": "Proses editing foto biasanya memakan waktu 3-5 hari kerja tergantung jumlah foto."
+    },
+    {
+      "question": "Apakah menyediakan kostum dan makeup?",
+      "answer": "Ya, kami menyediakan kostum dan makeup artist untuk sesi foto tertentu."
+    },
+    {
+      "question": "Apakah bisa foto outdoor?",
+      "answer": "Ya, kami menyediakan layanan foto outdoor dengan lokasi yang bisa disesuaikan."
+    }
+  ]
+}

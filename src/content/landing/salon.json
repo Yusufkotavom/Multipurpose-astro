@@ -1,0 +1,84 @@
+{
+  "id": "salon",
+  "name": "Salon Cantik",
+  "tagline": "Salon Kecantikan Profesional untuk Tampilan Terbaik Anda",
+  "description": "Salon kecantikan dengan layanan lengkap mulai dari potong rambut, styling, makeup, hingga perawatan kulit dengan teknisi berpengalaman.",
+  "hero": {
+    "title": "Salon Cantik",
+    "subtitle": "Layanan kecantikan lengkap untuk tampilan terbaik Anda dengan teknisi berpengalaman",
+    "cta": "Booking Sekarang",
+    "image": "/landing/salon-hero.jpg"
+  },
+  "colors": {
+    "primary": "#ec4899",
+    "secondary": "#be185d",
+    "accent": "#fdf2f8"
+  },
+  "services": [
+    {
+      "name": "Potong & Styling",
+      "description": "Potong rambut dan styling sesuai tren terbaru",
+      "price": "Mulai Rp 100.000",
+      "icon": "✂️"
+    },
+    {
+      "name": "Coloring & Highlight",
+      "description": "Pewarnaan rambut dan highlight profesional",
+      "price": "Mulai Rp 300.000",
+      "icon": "🎨"
+    },
+    {
+      "name": "Makeup & Bridal",
+      "description": "Makeup sehari-hari dan makeup pengantin",
+      "price": "Mulai Rp 500.000",
+      "icon": "💄"
+    },
+    {
+      "name": "Facial & Skincare",
+      "description": "Perawatan wajah dan kulit dengan produk premium",
+      "price": "Mulai Rp 200.000",
+      "icon": "✨"
+    }
+  ],
+  "whyUs": [
+    "Teknisi berpengalaman 5+ tahun",
+    "Produk kecantikan premium",
+    "Peralatan modern dan steril",
+    "Konsultasi gratis sebelum treatment",
+    "Booking online 24 jam"
+  ],
+  "testimonials": [
+    {
+      "name": "Dewi Sartika",
+      "role": "Pengantin",
+      "content": "Makeup pengantin saya sangat cantik! MUA-nya sangat detail dan hasilnya memukau.",
+      "rating": 5
+    },
+    {
+      "name": "Maya Indah",
+      "role": "Karyawan",
+      "content": "Potong rambut dan styling-nya bagus. Teknisi ramah dan penjelasannya detail.",
+      "rating": 5
+    }
+  ],
+  "contact": {
+    "phone": "+62 812-3456-7890",
+    "whatsapp": "+62 812-3456-7890",
+    "address": "Jl. Sudirman No. 123, Jakarta Pusat",
+    "hours": "Senin - Minggu: 09:00 - 20:00 WIB"
+  },
+  "faq": [
+    {
+      "question": "Apakah perlu booking terlebih dahulu?",
+      "answer": "Ya, kami menyarankan booking terlebih dahulu untuk menghindari antrian, terutama untuk layanan makeup."
+    },
+    {
+      "question": "Apakah menyediakan produk kecantikan?",
+      "answer": "Ya, kami menyediakan berbagai produk kecantikan premium yang bisa dibeli secara terpisah."
+    },
+    {
+      "question": "Apakah ada paket perawatan?",
+      "answer": "Ya, kami menyediakan paket perawatan dengan harga lebih hemat untuk treatment rutin."
+    }
+  ]
+}

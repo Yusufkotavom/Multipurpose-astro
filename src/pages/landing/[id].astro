@@ -1,0 +1,240 @@
+---
+export async function getStaticPaths() {
+  // In a real app, you would read from the content directory
+  const businesses = [
+    'bengkel',
+    'kafe', 
+    'studio-foto',
+    'laundry',
+    'fashion-muslim',
+    'salon',
+    'toko-bunga',
+    'toko-kue'
+  ];
+
+  return businesses.map((id) => ({
+    params: { id },
+    props: { id }
+  }));
+}
+
+const { id } = Astro.params;
+
+// In a real app, you would import the JSON file
+// For now, we'll use a simple object
+const businessData = {
+  bengkel: {
+    id: "bengkel",
+    name: "Bengkel Jaya",
+    tagline: "Bengkel Mobil Terpercaya di Jakarta",
+    description: "Bengkel mobil profesional dengan teknisi berpengalaman dan peralatan modern untuk perawatan dan perbaikan kendaraan Anda.",
+    hero: {
+      title: "Bengkel Mobil Terpercaya",
+      subtitle: "Perawatan dan perbaikan kendaraan dengan teknisi berpengalaman dan peralatan modern",
+      cta: "Booking Service",
+      image: "/landing/bengkel-hero.jpg"
+    },
+    colors: {
+      primary: "#dc2626",
+      secondary: "#991b1b",
+      accent: "#fef2f2"
+    },
+    services: [
+      {
+        name: "Service Berkala",
+        description: "Perawatan rutin untuk menjaga performa kendaraan",
+        price: "Rp 150.000",
+        icon: "🔧"
+      },
+      {
+        name: "Tune Up",
+        description: "Optimasi mesin untuk performa maksimal",
+        price: "Rp 300.000",
+        icon: "⚙️"
+      },
+      {
+        name: "Ganti Oli",
+        description: "Penggantian oli dengan kualitas terbaik",
+        price: "Rp 100.000",
+        icon: "🛢️"
+      },
+      {
+        name: "Perbaikan Mesin",
+        description: "Diagnosis dan perbaikan masalah mesin",
+        price: "Mulai Rp 500.000",
+        icon: "🔨"
+      }
+    ],
+    whyUs: [
+      "Teknisi berpengalaman 10+ tahun",
+      "Peralatan modern dan canggih",
+      "Garansi 3 bulan untuk setiap perbaikan",
+      "Layanan 24 jam untuk darurat",
+      "Harga transparan tanpa biaya tersembunyi"
+    ],
+    testimonials: [
+      {
+        name: "Budi Santoso",
+        role: "Pemilik Toyota Avanza",
+        content: "Bengkel yang sangat profesional. Teknisi ramah dan penjelasannya detail. Mobil saya jadi lebih halus setelah service di sini.",
+        rating: 5
+      },
+      {
+        name: "Siti Nurhaliza",
+        role: "Pemilik Honda Jazz",
+        content: "Pelayanan cepat dan harga terjangkau. Sudah 3 tahun mempercayakan mobil saya ke Bengkel Jaya.",
+        rating: 5
+      }
+    ],
+    contact: {
+      phone: "+62 812-3456-7890",
+      whatsapp: "+62 812-3456-7890",
+      address: "Jl. Sudirman No. 123, Jakarta Pusat",
+      hours: "Senin - Minggu: 08:00 - 20:00 WIB"
+    },
+    faq: [
+      {
+        question: "Berapa lama waktu service berkala?",
+        answer: "Service berkala biasanya memakan waktu 2-3 jam tergantung kondisi kendaraan."
+      },
+      {
+        question: "Apakah ada garansi untuk perbaikan?",
+        answer: "Ya, kami memberikan garansi 3 bulan untuk setiap perbaikan yang dilakukan."
+      },
+      {
+        question: "Apakah menerima kendaraan darurat?",
+        answer: "Ya, kami menyediakan layanan 24 jam untuk kendaraan darurat."
+      }
+    ]
+  },
+  kafe: {
+    id: "kafe",
+    name: "Kafe Nusantara",
+    tagline: "Kafe Modern dengan Cita Rasa Nusantara",
+    description: "Kafe yang menghadirkan suasana nyaman dengan menu kopi premium dan makanan tradisional Indonesia dengan sentuhan modern.",
+    hero: {
+      title: "Kafe Nusantara",
+      subtitle: "Nikmati kopi premium dan makanan tradisional Indonesia dalam suasana modern yang nyaman",
+      cta: "Lihat Menu",
+      image: "/landing/kafe-hero.jpg"
+    },
+    colors: {
+      primary: "#92400e",
+      secondary: "#78350f",
+      accent: "#fef3c7"
+    },
+    services: [
+      {
+        name: "Kopi Premium",
+        description: "Berbagai jenis kopi dari berbagai daerah Indonesia",
+        price: "Mulai Rp 25.000",
+        icon: "☕"
+      },
+      {
+        name: "Makanan Tradisional",
+        description: "Menu makanan tradisional dengan sentuhan modern",
+        price: "Mulai Rp 35.000",
+        icon: "🍛"
+      },
+      {
+        name: "Snack & Dessert",
+        description: "Camilan dan dessert homemade yang lezat",
+        price: "Mulai Rp 15.000",
+        icon: "🍰"
+      },
+      {
+        name: "Catering",
+        description: "Layanan catering untuk acara khusus",
+        price: "Mulai Rp 50.000/porsi",
+        icon: "🎉"
+      }
+    ],
+    whyUs: [
+      "Kopi premium dari berbagai daerah Indonesia",
+      "Chef berpengalaman dengan sertifikasi",
+      "Bahan baku segar dan berkualitas",
+      "Suasana nyaman untuk work from cafe",
+      "WiFi gratis dan power outlet"
+    ],
+    testimonials: [
+      {
+        name: "Ahmad Rahman",
+        role: "Freelancer",
+        content: "Tempat favorit untuk kerja. Kopinya enak dan suasana nyaman. WiFi cepat juga!",
+        rating: 5
+      },
+      {
+        name: "Dewi Sartika",
+        role: "Food Blogger",
+        content: "Makanan tradisionalnya autentik tapi dengan presentasi modern. Instagramable banget!",
+        rating: 5
+      }
+    ],
+    contact: {
+      phone: "+62 812-3456-7890",
+      whatsapp: "+62 812-3456-7890",
+      address: "Jl. Sudirman No. 123, Jakarta Pusat",
+      hours: "Senin - Minggu: 07:00 - 22:00 WIB"
+    },
+    faq: [
+      {
+        question: "Apakah ada menu vegetarian?",
+        answer: "Ya, kami menyediakan berbagai menu vegetarian yang lezat dan sehat."
+      },
+      {
+        question: "Apakah bisa reservasi untuk acara?",
+        answer: "Ya, kami menerima reservasi untuk acara khusus dengan kapasitas hingga 50 orang."
+      },
+      {
+        question: "Apakah ada delivery?",
+        answer: "Ya, kami bekerja sama dengan platform delivery untuk pengiriman ke area tertentu."
+      }
+    ]
+  }
+  // Add other businesses here...
+};
+
+const business = businessData[id as keyof typeof businessData];
+
+if (!business) {
+  return Astro.redirect('/404');
+}
+
+import Layout from '../../layouts/Layout.astro';
+import LandingPage from '../../components/LandingPage.astro';
+import RichSnippet from '../../components/RichSnippet.astro';
+import siteConfig from '../../../config/site.config';
+
+const pageTitle = business.name;
+const pageDescription = business.description;
+---
+
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  type="website"
+>
+  <RichSnippet 
+    type="Organization"
+    data={{
+      name: business.name,
+      url: `${siteConfig.url}/landing/${business.id}`,
+      logo: `${siteConfig.url}/logo.png`,
+      description: business.description,
+      address: {
+        streetAddress: "Jl. Sudirman No. 123",
+        addressLocality: "Jakarta Pusat",
+        addressRegion: "DKI Jakarta",
+        postalCode: "12345",
+        addressCountry: "ID"
+      },
+      contact: {
+        phone: business.contact.phone,
+        email: siteConfig.contact.email
+      },
+      socials: Object.values(siteConfig.socials)
+    }}
+  />
+  
+  <LandingPage business={business} />
+</Layout>

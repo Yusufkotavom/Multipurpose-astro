@@ -1,0 +1,84 @@
+{
+  "id": "toko-kue",
+  "name": "Toko Kue Lezat",
+  "tagline": "Kue Homemade Lezat untuk Setiap Momen Spesial",
+  "description": "Toko kue dengan berbagai jenis kue homemade, cake, dan pastry yang lezat dan berkualitas untuk setiap momen spesial.",
+  "hero": {
+    "title": "Toko Kue Lezat",
+    "subtitle": "Kue homemade lezat dan berkualitas untuk setiap momen spesial Anda",
+    "cta": "Pesan Sekarang",
+    "image": "/landing/toko-kue-hero.jpg"
+  },
+  "colors": {
+    "primary": "#f59e0b",
+    "secondary": "#d97706",
+    "accent": "#fffbeb"
+  },
+  "services": [
+    {
+      "name": "Birthday Cake",
+      "description": "Cake ulang tahun dengan desain custom",
+      "price": "Mulai Rp 200.000",
+      "icon": "🎂"
+    },
+    {
+      "name": "Wedding Cake",
+      "description": "Cake pengantin elegan untuk acara spesial",
+      "price": "Mulai Rp 1.500.000",
+      "icon": "💒"
+    },
+    {
+      "name": "Kue Kering",
+      "description": "Berbagai jenis kue kering homemade",
+      "price": "Mulai Rp 50.000",
+      "icon": "🍪"
+    },
+    {
+      "name": "Pastry",
+      "description": "Croissant, donat, dan pastry lainnya",
+      "price": "Mulai Rp 15.000",
+      "icon": "🥐"
+    }
+  ],
+  "whyUs": [
+    "Bahan berkualitas premium",
+    "Chef berpengalaman 10+ tahun",
+    "Desain cake custom sesuai permintaan",
+    "Tanpa pengawet dan pewarna buatan",
+    "Pengiriman gratis area tertentu"
+  ],
+  "testimonials": [
+    {
+      "name": "Ahmad Rahman",
+      "role": "Pemesan Birthday Cake",
+      "content": "Cake ulang tahun anak saya sangat cantik dan lezat! Desainnya sesuai permintaan.",
+      "rating": 5
+    },
+    {
+      "name": "Dewi Sartika",
+      "role": "Pemesan Wedding Cake",
+      "content": "Wedding cake kami sangat elegan dan lezat. Tamu-tamu banyak yang memuji.",
+      "rating": 5
+    }
+  ],
+  "contact": {
+    "phone": "+62 812-3456-7890",
+    "whatsapp": "+62 812-3456-7890",
+    "address": "Jl. Sudirman No. 123, Jakarta Pusat",
+    "hours": "Senin - Minggu: 08:00 - 20:00 WIB"
+  },
+  "faq": [
+    {
+      "question": "Berapa lama waktu pengerjaan cake custom?",
+      "answer": "Cake custom memerlukan waktu 2-3 hari pengerjaan tergantung kompleksitas desain."
+    },
+    {
+      "question": "Apakah bisa pesan untuk acara besar?",
+      "answer": "Ya, kami menerima pesanan untuk acara besar dengan booking minimal 1 minggu sebelumnya."
+    },
+    {
+      "question": "Apakah ada opsi vegan atau gluten-free?",
+      "answer": "Ya, kami menyediakan opsi vegan dan gluten-free untuk cake tertentu."
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import SearchBar from '../../components/SearchBar.astro';
+import CategoryFilter from '../../components/CategoryFilter.astro';
+import Pagination from '../../components/Pagination.astro';
+import RichSnippet from '../../components/RichSnippet.astro';
+import siteConfig from '../../../config/site.config';
+
+// Sample blog data - in real app, this would come from content/blog/*.mdx
+const blogPosts = [
+  {
+    slug: 'tips-website-profesional-2024',
+    title: '10 Tips Membuat Website Profesional di Tahun 2024',
+    excerpt: 'Pelajari cara membuat website yang profesional dan modern untuk bisnis Anda di era digital ini.',
+    author: 'Ahmad Developer',
+    authorSlug: 'ahmad-developer',
+    category: 'Tips & Tricks',
+    tags: ['website', 'profesional', '2024', 'tips'],
+    publishedDate: '2024-01-15',
+    readTime: '5 menit',
+    image: '/blog/website-tips-2024.jpg'
+  },
+  {
+    slug: 'seo-indonesia-optimasi',
+    title: 'Panduan Lengkap SEO untuk Website Indonesia',
+    excerpt: 'Optimasi website untuk mesin pencari dengan fokus pada pasar Indonesia dan bahasa Indonesia.',
+    author: 'Budi Marketer',
+    authorSlug: 'budi-marketer',
+    category: 'SEO',
+    tags: ['seo', 'indonesia', 'optimasi', 'google'],
+    publishedDate: '2024-01-10',
+    readTime: '8 menit',
+    image: '/blog/seo-indonesia.jpg'
+  },
+  {
+    slug: 'responsive-design-mobile-first',
+    title: 'Mobile-First Design: Kunci Website Modern',
+    excerpt: 'Mengapa mobile-first design penting dan bagaimana mengimplementasikannya dengan benar.',
+    author: 'Siti Designer',
+    authorSlug: 'siti-designer',
+    category: 'Design',
+    tags: ['design', 'mobile', 'responsive', 'ui/ux'],
+    publishedDate: '2024-01-05',
+    readTime: '6 menit',
+    image: '/blog/mobile-design.jpg'
+  },
+  {
+    slug: 'astro-vs-nextjs-perbandingan',
+    title: 'Astro vs Next.js: Mana yang Lebih Cocok untuk Website Bisnis?',
+    excerpt: 'Perbandingan mendalam antara Astro dan Next.js untuk pengembangan website bisnis.',
+    author: 'Ahmad Developer',
+    authorSlug: 'ahmad-developer',
+    category: 'Technology',
+    tags: ['astro', 'nextjs', 'framework', 'perbandingan'],
+    publishedDate: '2024-01-01',
+    readTime: '10 menit',
+    image: '/blog/astro-nextjs.jpg'
+  },
+  {
+    slug: 'website-bisnis-indonesia-trends',
+    title: 'Trend Website Bisnis Indonesia 2024',
+    excerpt: 'Analisis tren website bisnis di Indonesia dan prediksi untuk tahun 2024.',
+    author: 'Budi Marketer',
+    authorSlug: 'budi-marketer',
+    category: 'Trends',
+    tags: ['trends', 'indonesia', '2024', 'bisnis'],
+    publishedDate: '2023-12-28',
+    readTime: '7 menit',
+    image: '/blog/trends-2024.jpg'
+  },
+  {
+    slug: 'performa-website-optimasi',
+    title: 'Optimasi Performa Website: Dari Lambat ke Cepat',
+    excerpt: 'Teknik-teknik praktis untuk meningkatkan kecepatan loading website Anda.',
+    author: 'Ahmad Developer',
+    authorSlug: 'ahmad-developer',
+    category: 'Performance',
+    tags: ['performa', 'optimasi', 'kecepatan', 'loading'],
+    publishedDate: '2023-12-20',
+    readTime: '9 menit',
+    image: '/blog/performance-optimization.jpg'
+  }
+];
+
+const categories = ['Semua', 'Tips & Tricks', 'SEO', 'Design', 'Technology', 'Trends', 'Performance'];
+const currentCategory = Astro.url.searchParams.get('category') || 'Semua';
+const currentPage = parseInt(Astro.url.searchParams.get('page') || '1');
+const postsPerPage = 6;
+
+// Filter posts by category
+const filteredPosts = currentCategory === 'Semua' 
+  ? blogPosts 
+  : blogPosts.filter(post => post.category === currentCategory);
+
+// Pagination
+const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+const startIndex = (currentPage - 1) * postsPerPage;
+const endIndex = startIndex + postsPerPage;
+const paginatedPosts = filteredPosts.slice(startIndex, endIndex);
+
+const pageTitle = "Blog";
+const pageDescription = "Artikel terbaru seputar website, SEO, design, dan teknologi untuk bisnis Indonesia.";
+---
+
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  type="website"
+>
+  <RichSnippet 
+    type="Organization"
+    data={{
+      name: siteConfig.title,
+      url: siteConfig.url,
+      logo: `${siteConfig.url}/logo.png`,
+      description: siteConfig.description,
+      address: {
+        streetAddress: "Jl. Sudirman No. 123",
+        addressLocality: "Jakarta Pusat",
+        addressRegion: "DKI Jakarta",
+        postalCode: "12345",
+        addressCountry: "ID"
+      },
+      contact: {
+        phone: siteConfig.contact.phone,
+        email: siteConfig.contact.email
+      },
+      socials: Object.values(siteConfig.socials)
+    }}
+  />
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary-50 to-primary-100 py-20">
+    <div class="container-custom">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Blog
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Artikel terbaru seputar website, SEO, design, dan teknologi untuk bisnis Indonesia
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Content -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <!-- Search and Filter -->
+      <div class="mb-12">
+        <div class="flex flex-col lg:flex-row gap-6 items-center justify-between">
+          <SearchBar />
+          <CategoryFilter categories={categories} currentCategory={currentCategory} />
+        </div>
+      </div>
+
+      <!-- Blog Posts Grid -->
+      {paginatedPosts.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {paginatedPosts.map((post) => (
+            <BlogCard post={post} />
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-12">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Tidak ada artikel ditemukan</h3>
+          <p class="text-gray-600">Coba ubah filter atau kata kunci pencarian Anda.</p>
+        </div>
+      )}
+
+      <!-- Pagination -->
+      {totalPages > 1 && (
+        <Pagination 
+          currentPage={currentPage}
+          totalPages={totalPages}
+          currentCategory={currentCategory}
+        />
+      )}
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Client-side search functionality
+  const searchInput = document.getElementById('search-input');
+  const blogCards = document.querySelectorAll('[data-blog-card]');
+  
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const searchTerm = e.target.value.toLowerCase();
+      
+      blogCards.forEach(card => {
+        const title = card.querySelector('[data-title]').textContent.toLowerCase();
+        const excerpt = card.querySelector('[data-excerpt]').textContent.toLowerCase();
+        const tags = card.querySelector('[data-tags]').textContent.toLowerCase();
+        
+        const isMatch = title.includes(searchTerm) || 
+                       excerpt.includes(searchTerm) || 
+                       tags.includes(searchTerm);
+        
+        card.style.display = isMatch ? 'block' : 'none';
+      });
+    });
+  }
+</script>

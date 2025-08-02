@@ -1,0 +1,54 @@
+{
+  "name": "astro-business-indonesia",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Website multi-purpose profesional untuk berbagai bisnis di Indonesia yang dibangun dengan Astro, Tailwind CSS, dan Flowbite React.",
+  "author": "Your Name",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.3.0",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "astro": "^5.0.0",
+    "clsx": "^2.1.0",
+    "dotenv": "^16.4.5",
+    "flowbite": "^2.3.0",
+    "flowbite-react": "^0.7.2",
+    "fuse.js": "^7.0.0",
+    "gray-matter": "^4.0.3",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "slugify": "^1.6.6",
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.11"
+  },
+  "keywords": [
+    "astro",
+    "website",
+    "business",
+    "indonesia",
+    "landing-page",
+    "seo",
+    "tailwindcss",
+    "flowbite",
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/astro-business-indonesia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/astro-business-indonesia/issues"
+  },
+  "homepage": "https://github.com/yourusername/astro-business-indonesia#readme"
+}

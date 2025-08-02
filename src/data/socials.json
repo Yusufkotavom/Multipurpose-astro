@@ -1,0 +1,32 @@
+{
+  "facebook": {
+    "name": "Facebook",
+    "url": "https://facebook.com/yourcompany",
+    "icon": "facebook"
+  },
+  "instagram": {
+    "name": "Instagram",
+    "url": "https://instagram.com/yourcompany",
+    "icon": "instagram"
+  },
+  "twitter": {
+    "name": "Twitter",
+    "url": "https://twitter.com/yourcompany",
+    "icon": "twitter"
+  },
+  "youtube": {
+    "name": "YouTube",
+    "url": "https://youtube.com/yourcompany",
+    "icon": "youtube"
+  },
+  "linkedin": {
+    "name": "LinkedIn",
+    "url": "https://linkedin.com/company/yourcompany",
+    "icon": "linkedin"
+  },
+  "whatsapp": {
+    "name": "WhatsApp",
+    "url": "https://wa.me/6281234567890",
+    "icon": "whatsapp"
+  }
+}

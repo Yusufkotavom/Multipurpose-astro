@@ -1,0 +1,84 @@
+{
+  "id": "kafe",
+  "name": "Kafe Nusantara",
+  "tagline": "Kafe Modern dengan Cita Rasa Nusantara",
+  "description": "Kafe yang menghadirkan suasana nyaman dengan menu kopi premium dan makanan tradisional Indonesia dengan sentuhan modern.",
+  "hero": {
+    "title": "Kafe Nusantara",
+    "subtitle": "Nikmati kopi premium dan makanan tradisional Indonesia dalam suasana modern yang nyaman",
+    "cta": "Lihat Menu",
+    "image": "/landing/kafe-hero.jpg"
+  },
+  "colors": {
+    "primary": "#92400e",
+    "secondary": "#78350f",
+    "accent": "#fef3c7"
+  },
+  "services": [
+    {
+      "name": "Kopi Premium",
+      "description": "Berbagai jenis kopi dari berbagai daerah Indonesia",
+      "price": "Mulai Rp 25.000",
+      "icon": "☕"
+    },
+    {
+      "name": "Makanan Tradisional",
+      "description": "Menu makanan tradisional dengan sentuhan modern",
+      "price": "Mulai Rp 35.000",
+      "icon": "🍛"
+    },
+    {
+      "name": "Snack & Dessert",
+      "description": "Camilan dan dessert homemade yang lezat",
+      "price": "Mulai Rp 15.000",
+      "icon": "🍰"
+    },
+    {
+      "name": "Catering",
+      "description": "Layanan catering untuk acara khusus",
+      "price": "Mulai Rp 50.000/porsi",
+      "icon": "🎉"
+    }
+  ],
+  "whyUs": [
+    "Kopi premium dari berbagai daerah Indonesia",
+    "Chef berpengalaman dengan sertifikasi",
+    "Bahan baku segar dan berkualitas",
+    "Suasana nyaman untuk work from cafe",
+    "WiFi gratis dan power outlet"
+  ],
+  "testimonials": [
+    {
+      "name": "Ahmad Rahman",
+      "role": "Freelancer",
+      "content": "Tempat favorit untuk kerja. Kopinya enak dan suasana nyaman. WiFi cepat juga!",
+      "rating": 5
+    },
+    {
+      "name": "Dewi Sartika",
+      "role": "Food Blogger",
+      "content": "Makanan tradisionalnya autentik tapi dengan presentasi modern. Instagramable banget!",
+      "rating": 5
+    }
+  ],
+  "contact": {
+    "phone": "+62 812-3456-7890",
+    "whatsapp": "+62 812-3456-7890",
+    "address": "Jl. Sudirman No. 123, Jakarta Pusat",
+    "hours": "Senin - Minggu: 07:00 - 22:00 WIB"
+  },
+  "faq": [
+    {
+      "question": "Apakah ada menu vegetarian?",
+      "answer": "Ya, kami menyediakan berbagai menu vegetarian yang lezat dan sehat."
+    },
+    {
+      "question": "Apakah bisa reservasi untuk acara?",
+      "answer": "Ya, kami menerima reservasi untuk acara khusus dengan kapasitas hingga 50 orang."
+    },
+    {
+      "question": "Apakah ada delivery?",
+      "answer": "Ya, kami bekerja sama dengan platform delivery untuk pengiriman ke area tertentu."
+    }
+  ]
+}

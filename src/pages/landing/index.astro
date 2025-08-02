@@ -1,0 +1,193 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RichSnippet from '../../components/RichSnippet.astro';
+import siteConfig from '../../../config/site.config';
+
+const pageTitle = "Landing Page Bisnis Indonesia";
+const pageDescription = "Koleksi landing page untuk berbagai jenis bisnis di Indonesia dengan desain modern dan profesional.";
+
+const businesses = [
+  {
+    id: 'bengkel',
+    name: 'Bengkel Jaya',
+    description: 'Bengkel mobil profesional dengan teknisi berpengalaman dan peralatan modern.',
+    image: '/landing/bengkel-hero.jpg',
+    category: 'Otomotif',
+    color: '#dc2626'
+  },
+  {
+    id: 'kafe',
+    name: 'Kafe Nusantara',
+    description: 'Kafe modern dengan menu kopi premium dan makanan tradisional Indonesia.',
+    image: '/landing/kafe-hero.jpg',
+    category: 'F&B',
+    color: '#92400e'
+  },
+  {
+    id: 'studio-foto',
+    name: 'Studio Foto Indah',
+    description: 'Studio foto profesional untuk mengabadikan momen-momen berharga.',
+    image: '/landing/studio-foto-hero.jpg',
+    category: 'Fotografi',
+    color: '#7c3aed'
+  },
+  {
+    id: 'laundry',
+    name: 'Laundry Express',
+    description: 'Layanan laundry kiloan dengan kualitas terbaik dan pengiriman gratis.',
+    image: '/landing/laundry-hero.jpg',
+    category: 'Jasa',
+    color: '#059669'
+  },
+  {
+    id: 'fashion-muslim',
+    name: 'Toko Fashion Muslim',
+    description: 'Fashion muslim modern dan elegan dengan koleksi lengkap.',
+    image: '/landing/fashion-muslim-hero.jpg',
+    category: 'Fashion',
+    color: '#8b5cf6'
+  },
+  {
+    id: 'salon',
+    name: 'Salon Cantik',
+    description: 'Salon kecantikan profesional untuk tampilan terbaik Anda.',
+    image: '/landing/salon-hero.jpg',
+    category: 'Kecantikan',
+    color: '#ec4899'
+  },
+  {
+    id: 'toko-bunga',
+    name: 'Toko Bunga Indah',
+    description: 'Toko bunga terpercaya untuk setiap momen spesial.',
+    image: '/landing/toko-bunga-hero.jpg',
+    category: 'Dekorasi',
+    color: '#10b981'
+  },
+  {
+    id: 'toko-kue',
+    name: 'Toko Kue Lezat',
+    description: 'Kue homemade lezat dan berkualitas untuk setiap momen spesial.',
+    image: '/landing/toko-kue-hero.jpg',
+    category: 'F&B',
+    color: '#f59e0b'
+  }
+];
+---
+
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  type="website"
+>
+  <RichSnippet 
+    type="Organization"
+    data={{
+      name: siteConfig.title,
+      url: siteConfig.url,
+      logo: `${siteConfig.url}/logo.png`,
+      description: siteConfig.description,
+      address: {
+        streetAddress: "Jl. Sudirman No. 123",
+        addressLocality: "Jakarta Pusat",
+        addressRegion: "DKI Jakarta",
+        postalCode: "12345",
+        addressCountry: "ID"
+      },
+      contact: {
+        phone: siteConfig.contact.phone,
+        email: siteConfig.contact.email
+      },
+      socials: Object.values(siteConfig.socials)
+    }}
+  />
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary-50 to-primary-100 py-20">
+    <div class="container-custom">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Landing Page Bisnis Indonesia
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Koleksi landing page untuk berbagai jenis bisnis di Indonesia dengan desain modern dan profesional
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Businesses Grid -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {businesses.map((business) => (
+          <a 
+            href={`/landing/${business.id}`}
+            class="group block bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+          >
+            <!-- Image -->
+            <div class="aspect-video bg-gray-200 overflow-hidden">
+              <div 
+                class="w-full h-full flex items-center justify-center text-6xl"
+                style={`background-color: ${business.color}20`}
+              >
+                {business.category === 'Otomotif' && '🔧'}
+                {business.category === 'F&B' && '🍽️'}
+                {business.category === 'Fotografi' && '📸'}
+                {business.category === 'Jasa' && '👕'}
+                {business.category === 'Fashion' && '👗'}
+                {business.category === 'Kecantikan' && '💄'}
+                {business.category === 'Dekorasi' && '🌹'}
+              </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold" style={`background-color: ${business.color}20; color: ${business.color}`}>
+                  {business.category}
+                </span>
+              </div>
+              
+              <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-200">
+                {business.name}
+              </h3>
+              
+              <p class="text-gray-600 mb-4">
+                {business.description}
+              </p>
+              
+              <div class="flex items-center text-primary-600 font-semibold">
+                Lihat Landing Page
+                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container-custom">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Butuh Landing Page Kustom?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Kami dapat membuat landing page khusus untuk bisnis Anda dengan desain yang sesuai dengan brand dan kebutuhan.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="btn-primary">
+            Konsultasi Gratis
+          </a>
+          <a href="/pricing" class="btn-secondary">
+            Lihat Paket
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

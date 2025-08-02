@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import Pricing from '../components/Pricing.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CTA from '../components/CTA.astro';
+import RichSnippet from '../components/RichSnippet.astro';
+import siteConfig from '../../../config/site.config';
+
+const pageTitle = "Beranda";
+const pageDescription = "Website profesional untuk berbagai bisnis di Indonesia dengan fitur lengkap dan SEO-friendly";
+---
+
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  type="website"
+>
+  <RichSnippet 
+    type="Organization"
+    data={{
+      name: siteConfig.title,
+      url: siteConfig.url,
+      logo: `${siteConfig.url}/logo.png`,
+      description: siteConfig.description,
+      address: {
+        streetAddress: "Jl. Sudirman No. 123",
+        addressLocality: "Jakarta Pusat",
+        addressRegion: "DKI Jakarta",
+        postalCode: "12345",
+        addressCountry: "ID"
+      },
+      contact: {
+        phone: siteConfig.contact.phone,
+        email: siteConfig.contact.email
+      },
+      socials: Object.values(siteConfig.socials)
+    }}
+  />
+  
+  <Hero />
+  <Features />
+  <Pricing />
+  <Testimonials />
+  <CTA />
+</Layout>

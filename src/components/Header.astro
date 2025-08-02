@@ -1,0 +1,88 @@
+---
+import navigation from '../data/navigation.json';
+import siteConfig from '../../../config/site.config';
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="container-custom">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="/" class="text-2xl font-bold text-primary-600">
+          {siteConfig.title.split(' ')[0]}
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8">
+        {navigation.main.map((item) => (
+          <a
+            href={item.href}
+            class={`text-sm font-medium transition-colors duration-200 ${
+              currentPath === item.href
+                ? 'text-primary-600'
+                : 'text-gray-600 hover:text-primary-600'
+            }`}
+          >
+            {item.title}
+          </a>
+        ))}
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="/contact" class="btn-primary">
+          Hubungi Kami
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-button"
+        class="md:hidden p-2 rounded-md text-gray-600 hover:text-primary-600 hover:bg-gray-100 transition-colors duration-200"
+        aria-label="Toggle mobile menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        {navigation.main.map((item) => (
+          <a
+            href={item.href}
+            class={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+              currentPath === item.href
+                ? 'text-primary-600 bg-primary-50'
+                : 'text-gray-600 hover:text-primary-600 hover:bg-gray-50'
+            }`}
+          >
+            {item.title}
+          </a>
+        ))}
+        <div class="pt-4">
+          <a href="/contact" class="btn-primary w-full text-center">
+            Hubungi Kami
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>

@@ -1,0 +1,84 @@
+{
+  "id": "toko-bunga",
+  "name": "Toko Bunga Indah",
+  "tagline": "Toko Bunga Terpercaya untuk Setiap Momen Spesial",
+  "description": "Toko bunga dengan berbagai jenis bunga segar, rangkaian bunga, dan dekorasi untuk setiap momen spesial Anda.",
+  "hero": {
+    "title": "Toko Bunga Indah",
+    "subtitle": "Bunga segar dan rangkaian indah untuk setiap momen spesial Anda",
+    "cta": "Pesan Sekarang",
+    "image": "/landing/toko-bunga-hero.jpg"
+  },
+  "colors": {
+    "primary": "#10b981",
+    "secondary": "#059669",
+    "accent": "#f0fdf4"
+  },
+  "services": [
+    {
+      "name": "Bunga Segar",
+      "description": "Berbagai jenis bunga segar dari petani lokal",
+      "price": "Mulai Rp 25.000",
+      "icon": "🌹"
+    },
+    {
+      "name": "Rangkaian Bunga",
+      "description": "Bouquet dan rangkaian bunga untuk berbagai acara",
+      "price": "Mulai Rp 150.000",
+      "icon": "💐"
+    },
+    {
+      "name": "Dekorasi Acara",
+      "description": "Dekorasi bunga untuk wedding, ulang tahun, dll",
+      "price": "Mulai Rp 500.000",
+      "icon": "🎉"
+    },
+    {
+      "name": "Pengiriman",
+      "description": "Pengiriman bunga ke seluruh Jakarta",
+      "price": "Rp 25.000",
+      "icon": "🚚"
+    }
+  ],
+  "whyUs": [
+    "Bunga segar dari petani lokal",
+    "Desain rangkaian unik dan kreatif",
+    "Pengiriman tepat waktu",
+    "Konsultasi gratis untuk dekorasi",
+    "Garansi bunga segar 24 jam"
+  ],
+  "testimonials": [
+    {
+      "name": "Rudi Hartono",
+      "role": "Pemesan Wedding",
+      "content": "Dekorasi bunga untuk wedding kami sangat indah! Tim-nya kreatif dan profesional.",
+      "rating": 5
+    },
+    {
+      "name": "Siti Nurhaliza",
+      "role": "Pelanggan Rutin",
+      "content": "Bunga-bunganya selalu segar dan rangkaiannya cantik. Sudah jadi langganan setahun ini.",
+      "rating": 5
+    }
+  ],
+  "contact": {
+    "phone": "+62 812-3456-7890",
+    "whatsapp": "+62 812-3456-7890",
+    "address": "Jl. Sudirman No. 123, Jakarta Pusat",
+    "hours": "Senin - Minggu: 08:00 - 20:00 WIB"
+  },
+  "faq": [
+    {
+      "question": "Berapa lama bunga bisa bertahan?",
+      "answer": "Bunga segar bisa bertahan 5-7 hari dengan perawatan yang tepat."
+    },
+    {
+      "question": "Apakah bisa pesan untuk acara besar?",
+      "answer": "Ya, kami menerima pesanan untuk acara besar dengan booking minimal 1 minggu sebelumnya."
+    },
+    {
+      "question": "Apakah ada area pengiriman gratis?",
+      "answer": "Ya, pengiriman gratis untuk area dalam radius 3 km dari toko."
+    }
+  ]
+}
