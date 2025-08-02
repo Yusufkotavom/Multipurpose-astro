@@ -34,7 +34,7 @@ Website multi-purpose profesional untuk berbagai bisnis di Indonesia yang dibang
 - **Responsive Design** - Mobile-first approach dengan Tailwind CSS
 - **Performance Optimized** - Fast loading dan SEO-friendly
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Teknologi
 
 - **Astro** - Framework untuk static site generation
 - **Tailwind CSS** - Utility-first CSS framework
@@ -47,23 +47,58 @@ Website multi-purpose profesional untuk berbagai bisnis di Indonesia yang dibang
 
 ```bash
 # Clone repository
-git clone <repository-url>
+git clone https://github.com/yourusername/astro-business-indonesia.git
 cd astro-business-indonesia
 
 # Install dependencies
 npm install
 
-# Run development server
+# Jalankan development server
 npm run dev
 
-# Build for production
+# Build untuk production
 npm run build
 
-# Preview production build
+# Preview build
 npm run preview
 ```
 
-## 🏗️ Struktur Proyek
+## 🚀 Deployment
+
+### Vercel (Recommended)
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+
+# Atau deploy langsung dari GitHub
+# 1. Push ke GitHub
+# 2. Connect repository di Vercel
+# 3. Deploy otomatis
+```
+
+### Netlify
+```bash
+# Build project
+npm run build
+
+# Deploy folder dist ke Netlify
+# Atau gunakan Netlify CLI
+netlify deploy --prod --dir=dist
+```
+
+### GitHub Pages
+```bash
+# Build project
+npm run build
+
+# Push folder dist ke branch gh-pages
+# Atau gunakan GitHub Actions
+```
+
+## 📁 Struktur Proyek
 
 ```
 astro-business-indonesia/
@@ -112,61 +147,47 @@ astro-business-indonesia/
 └── package.json
 ```
 
-## 🎨 Customization
+## 🎨 Kustomisasi
 
-### Mengubah Konfigurasi Website
-Edit file `config/site.config.ts` untuk mengubah:
-- Nama website
-- Deskripsi
-- Informasi kontak
-- Social media links
-- Google Analytics
+### Mengubah Konten
+Semua konten dapat diubah melalui file konfigurasi:
+
+1. **Site Config** (`config/site.config.ts`) - Konfigurasi utama website
+2. **Navigation** (`src/data/navigation.json`) - Menu navigasi
+3. **Social Media** (`src/data/socials.json`) - Social media links
+4. **Landing Pages** (`src/content/landing/`) - Data landing page
 
 ### Menambah Landing Page Baru
-1. Buat file JSON di `src/content/landing/[nama-bisnis].json`
-2. Ikuti struktur yang sudah ada
-3. Landing page akan otomatis tersedia di `/landing/[nama-bisnis]`
+1. Buat file markdown di `src/content/landing/`
+2. Tambahkan data di `config/site.config.ts`
+3. Landing page akan otomatis tersedia di `/landing/[id]`
 
-### Mengubah Warna dan Styling
-- Edit `tailwind.config.mjs` untuk custom colors
-- Edit `src/styles/global.css` untuk custom styles
-- Setiap landing page memiliki warna custom di file JSON
+### Mengubah Warna & Styling
+- Edit `src/styles/global.css` untuk custom CSS
+- Gunakan Tailwind CSS classes untuk styling
+- Setiap landing page memiliki warna custom yang dapat diubah
 
-## 📱 Responsive Design
+## 🔧 Konfigurasi
 
-Website ini fully responsive dengan breakpoints:
-- **Mobile**: < 768px
-- **Tablet**: 768px - 1024px
-- **Desktop**: > 1024px
-
-## 🔍 SEO Features
-
-- **Meta Tags**: Title, description, keywords
-- **Open Graph**: Facebook sharing optimization
-- **Twitter Cards**: Twitter sharing optimization
-- **JSON-LD**: Structured data untuk search engines
-- **Sitemap**: Otomatis generate sitemap.xml
-- **Robots.txt**: Search engine crawling rules
-- **Canonical URLs**: Mencegah duplicate content
-
-## 🚀 Deployment
-
-### Vercel
+### Environment Variables
 ```bash
-npm run build
-# Upload dist/ folder ke Vercel
+# Copy .env.example
+cp .env.example .env
+
+# Edit .env file
+SITE_URL=https://your-domain.com
+SITE_NAME=Your Site Name
+SITE_DESCRIPTION=Your site description
 ```
 
-### Netlify
-```bash
-npm run build
-# Upload dist/ folder ke Netlify
-```
-
-### GitHub Pages
-```bash
-npm run build
-# Push dist/ folder ke gh-pages branch
+### Build Configuration
+```javascript
+// astro.config.mjs
+export default defineConfig({
+  site: 'https://your-domain.com',
+  output: 'static',
+  trailingSlash: 'never'
+});
 ```
 
 ## 📊 Performance
@@ -177,7 +198,7 @@ npm run build
 - **Cumulative Layout Shift**: < 0.1
 - **First Input Delay**: < 100ms
 
-## 🤝 Contributing
+## 🤝 Kontribusi
 
 1. Fork repository
 2. Buat feature branch (`git checkout -b feature/AmazingFeature`)
@@ -185,20 +206,20 @@ npm run build
 4. Push ke branch (`git push origin feature/AmazingFeature`)
 5. Buat Pull Request
 
-## 📄 License
+## 📝 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-## 📞 Contact
+## 📞 Kontak
 
-- **Website**: [your-domain.com](https://your-domain.com)
-- **Email**: info@yourcompany.com
-- **Phone**: +62 812-3456-7890
+Your Name - [@yourusername](https://twitter.com/yourusername) - email@example.com
+
+Project Link: [https://github.com/yourusername/astro-business-indonesia](https://github.com/yourusername/astro-business-indonesia)
 
 ## 🙏 Acknowledgments
 
-- [Astro](https://astro.build) - Framework yang luar biasa
-- [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
-- [Flowbite](https://flowbite.com) - UI components
-- [Fuse.js](https://fusejs.io) - Fuzzy search library
+- [Astro](https://astro.build/) - Static site generator
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+- [Flowbite](https://flowbite.com/) - UI components
+- [React](https://reactjs.org/) - JavaScript library
 
