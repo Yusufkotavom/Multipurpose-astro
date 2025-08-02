@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RichSnippet from '../components/RichSnippet.astro';
+import siteConfig from '../../../config/site.config';
+
+const pageTitle = "Tentang Kami";
+const pageDescription = "Tim profesional yang berdedikasi untuk membantu bisnis Indonesia memiliki website yang berkualitas tinggi dan sesuai kebutuhan.";
+---
+
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  type="website"
+>
+  <RichSnippet 
+    type="Organization"
+    data={{
+      name: siteConfig.title,
+      url: siteConfig.url,
+      logo: `${siteConfig.url}/logo.png`,
+      description: siteConfig.description,
+      address: {
+        streetAddress: "Jl. Sudirman No. 123",
+        addressLocality: "Jakarta Pusat",
+        addressRegion: "DKI Jakarta",
+        postalCode: "12345",
+        addressCountry: "ID"
+      },
+      contact: {
+        phone: siteConfig.contact.phone,
+        email: siteConfig.contact.email
+      },
+      socials: Object.values(siteConfig.socials)
+    }}
+  />
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary-50 to-primary-100 py-20">
+    <div class="container-custom">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Tentang Kami
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Tim profesional yang berdedikasi untuk membantu bisnis Indonesia memiliki website yang berkualitas tinggi dan sesuai kebutuhan.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision Mission -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Visi</h2>
+          <p class="text-lg text-gray-600 mb-8">
+            Menjadi partner terpercaya dalam transformasi digital untuk bisnis Indonesia, 
+            membantu setiap bisnis memiliki kehadiran online yang profesional dan efektif.
+          </p>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Misi</h2>
+          <p class="text-lg text-gray-600">
+            Memberikan solusi website berkualitas tinggi dengan teknologi terdepan, 
+            layanan customer service yang responsif, dan komitmen untuk kesuksesan bisnis klien kami.
+          </p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-8">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Nilai-Nilai Kami</h3>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                <span class="text-primary-600 font-bold">1</span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Kualitas</h4>
+                <p class="text-gray-600">Setiap website yang kami buat memenuhi standar kualitas tertinggi</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                <span class="text-primary-600 font-bold">2</span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Inovasi</h4>
+                <p class="text-gray-600">Selalu menggunakan teknologi terbaru untuk hasil terbaik</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                <span class="text-primary-600 font-bold">3</span>
+              </div>
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Integritas</h4>
+                <p class="text-gray-600">Menjaga kepercayaan klien dengan transparansi dan profesionalisme</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-20 bg-gray-50" id="team">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Tim Kami
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Tim profesional yang terdiri dari developer, designer, dan digital marketer berpengalaman
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl p-8 text-center">
+          <div class="w-24 h-24 bg-primary-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span class="text-3xl">👨‍💻</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Ahmad Developer</h3>
+          <p class="text-gray-600 mb-4">Senior Full-Stack Developer</p>
+          <p class="text-gray-600 text-sm">Spesialisasi dalam React, Node.js, dan Astro dengan pengalaman 5+ tahun</p>
+        </div>
+        
+        <div class="bg-white rounded-xl p-8 text-center">
+          <div class="w-24 h-24 bg-primary-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span class="text-3xl">👩‍🎨</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Siti Designer</h3>
+          <p class="text-gray-600 mb-4">UI/UX Designer</p>
+          <p class="text-gray-600 text-sm">Ahli dalam menciptakan desain yang user-friendly dan modern</p>
+        </div>
+        
+        <div class="bg-white rounded-xl p-8 text-center">
+          <div class="w-24 h-24 bg-primary-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span class="text-3xl">👨‍💼</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Budi Marketer</h3>
+          <p class="text-gray-600 mb-4">Digital Marketing Specialist</p>
+          <p class="text-gray-600 text-sm">Spesialis SEO dan digital marketing untuk meningkatkan traffic website</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-20 bg-primary-600 text-white">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold mb-2">500+</div>
+          <div class="text-primary-100">Website Dibuat</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold mb-2">50+</div>
+          <div class="text-primary-100">Jenis Bisnis</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold mb-2">98%</div>
+          <div class="text-primary-100">Klien Puas</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold mb-2">24/7</div>
+          <div class="text-primary-100">Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

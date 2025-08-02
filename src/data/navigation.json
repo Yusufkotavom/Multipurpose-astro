@@ -1,0 +1,98 @@
+{
+  "main": [
+    {
+      "title": "Beranda",
+      "href": "/"
+    },
+    {
+      "title": "Tentang Kami",
+      "href": "/about"
+    },
+    {
+      "title": "Harga",
+      "href": "/pricing"
+    },
+    {
+      "title": "Blog",
+      "href": "/blog"
+    },
+    {
+      "title": "Kontak",
+      "href": "/contact"
+    },
+    {
+      "title": "Landing Page",
+      "href": "/landing"
+    }
+  ],
+  "footer": [
+    {
+      "title": "Perusahaan",
+      "items": [
+        {
+          "title": "Tentang Kami",
+          "href": "/about"
+        },
+        {
+          "title": "Tim",
+          "href": "/about#team"
+        },
+        {
+          "title": "Karir",
+          "href": "/careers"
+        }
+      ]
+    },
+    {
+      "title": "Layanan",
+      "items": [
+        {
+          "title": "Konsultasi",
+          "href": "/services/consultation"
+        },
+        {
+          "title": "Pelatihan",
+          "href": "/services/training"
+        },
+        {
+          "title": "Support",
+          "href": "/support"
+        }
+      ]
+    },
+    {
+      "title": "Sumber Daya",
+      "items": [
+        {
+          "title": "Blog",
+          "href": "/blog"
+        },
+        {
+          "title": "FAQ",
+          "href": "/faq"
+        },
+        {
+          "title": "Dokumentasi",
+          "href": "/docs"
+        }
+      ]
+    },
+    {
+      "title": "Legal",
+      "items": [
+        {
+          "title": "Privasi",
+          "href": "/privacy"
+        },
+        {
+          "title": "Syarat & Ketentuan",
+          "href": "/terms"
+        },
+        {
+          "title": "Cookie Policy",
+          "href": "/cookies"
+        }
+      ]
+    }
+  ]
+}

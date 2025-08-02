@@ -1,0 +1,84 @@
+{
+  "id": "bengkel",
+  "name": "Bengkel Jaya",
+  "tagline": "Bengkel Mobil Terpercaya di Jakarta",
+  "description": "Bengkel mobil profesional dengan teknisi berpengalaman dan peralatan modern untuk perawatan dan perbaikan kendaraan Anda.",
+  "hero": {
+    "title": "Bengkel Mobil Terpercaya",
+    "subtitle": "Perawatan dan perbaikan kendaraan dengan teknisi berpengalaman dan peralatan modern",
+    "cta": "Booking Service",
+    "image": "/landing/bengkel-hero.jpg"
+  },
+  "colors": {
+    "primary": "#dc2626",
+    "secondary": "#991b1b",
+    "accent": "#fef2f2"
+  },
+  "services": [
+    {
+      "name": "Service Berkala",
+      "description": "Perawatan rutin untuk menjaga performa kendaraan",
+      "price": "Rp 150.000",
+      "icon": "🔧"
+    },
+    {
+      "name": "Tune Up",
+      "description": "Optimasi mesin untuk performa maksimal",
+      "price": "Rp 300.000",
+      "icon": "⚙️"
+    },
+    {
+      "name": "Ganti Oli",
+      "description": "Penggantian oli dengan kualitas terbaik",
+      "price": "Rp 100.000",
+      "icon": "🛢️"
+    },
+    {
+      "name": "Perbaikan Mesin",
+      "description": "Diagnosis dan perbaikan masalah mesin",
+      "price": "Mulai Rp 500.000",
+      "icon": "🔨"
+    }
+  ],
+  "whyUs": [
+    "Teknisi berpengalaman 10+ tahun",
+    "Peralatan modern dan canggih",
+    "Garansi 3 bulan untuk setiap perbaikan",
+    "Layanan 24 jam untuk darurat",
+    "Harga transparan tanpa biaya tersembunyi"
+  ],
+  "testimonials": [
+    {
+      "name": "Budi Santoso",
+      "role": "Pemilik Toyota Avanza",
+      "content": "Bengkel yang sangat profesional. Teknisi ramah dan penjelasannya detail. Mobil saya jadi lebih halus setelah service di sini.",
+      "rating": 5
+    },
+    {
+      "name": "Siti Nurhaliza",
+      "role": "Pemilik Honda Jazz",
+      "content": "Pelayanan cepat dan harga terjangkau. Sudah 3 tahun mempercayakan mobil saya ke Bengkel Jaya.",
+      "rating": 5
+    }
+  ],
+  "contact": {
+    "phone": "+62 812-3456-7890",
+    "whatsapp": "+62 812-3456-7890",
+    "address": "Jl. Sudirman No. 123, Jakarta Pusat",
+    "hours": "Senin - Minggu: 08:00 - 20:00 WIB"
+  },
+  "faq": [
+    {
+      "question": "Berapa lama waktu service berkala?",
+      "answer": "Service berkala biasanya memakan waktu 2-3 jam tergantung kondisi kendaraan."
+    },
+    {
+      "question": "Apakah ada garansi untuk perbaikan?",
+      "answer": "Ya, kami memberikan garansi 3 bulan untuk setiap perbaikan yang dilakukan."
+    },
+    {
+      "question": "Apakah menerima kendaraan darurat?",
+      "answer": "Ya, kami menyediakan layanan 24 jam untuk kendaraan darurat."
+    }
+  ]
+}

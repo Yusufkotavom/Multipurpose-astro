@@ -1,0 +1,102 @@
+---
+export interface Props {
+  post: {
+    slug: string;
+    title: string;
+    excerpt: string;
+    author: string;
+    authorSlug: string;
+    category: string;
+    tags: string[];
+    publishedDate: string;
+    readTime: string;
+    image: string;
+  };
+}
+
+const { post } = Astro.props;
+
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('id-ID', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+};
+---
+
+<article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden" data-blog-card>
+  <!-- Image -->
+  <div class="aspect-video bg-gray-200 overflow-hidden">
+    <img 
+      src={post.image} 
+      alt={post.title}
+      class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+      loading="lazy"
+    />
+  </div>
+  
+  <!-- Content -->
+  <div class="p-6">
+    <!-- Category -->
+    <div class="mb-3">
+      <span class="inline-block bg-primary-100 text-primary-600 text-xs font-semibold px-3 py-1 rounded-full">
+        {post.category}
+      </span>
+    </div>
+    
+    <!-- Title -->
+    <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2" data-title>
+      <a href={`/blog/${post.slug}`} class="hover:text-primary-600 transition-colors duration-200">
+        {post.title}
+      </a>
+    </h3>
+    
+    <!-- Excerpt -->
+    <p class="text-gray-600 mb-4 line-clamp-3" data-excerpt>
+      {post.excerpt}
+    </p>
+    
+    <!-- Meta -->
+    <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+      <div class="flex items-center">
+        <span class="mr-4">
+          <a href={`/author/${post.authorSlug}`} class="hover:text-primary-600 transition-colors duration-200">
+            {post.author}
+          </a>
+        </span>
+        <span>{formatDate(post.publishedDate)}</span>
+      </div>
+      <span>{post.readTime}</span>
+    </div>
+    
+    <!-- Tags -->
+    <div class="flex flex-wrap gap-2" data-tags>
+      {post.tags.slice(0, 3).map((tag) => (
+        <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+          #{tag}
+        </span>
+      ))}
+      {post.tags.length > 3 && (
+        <span class="text-xs text-gray-400">+{post.tags.length - 3} more</span>
+      )}
+    </div>
+  </div>
+</article>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

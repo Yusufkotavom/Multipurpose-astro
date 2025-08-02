@@ -1,0 +1,266 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RichSnippet from '../components/RichSnippet.astro';
+import siteConfig from '../../../config/site.config';
+
+const pageTitle = "Harga & Paket";
+const pageDescription = "Pilihan paket website profesional yang sesuai dengan kebutuhan dan budget bisnis Anda.";
+---
+
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  type="website"
+>
+  <RichSnippet 
+    type="Organization"
+    data={{
+      name: siteConfig.title,
+      url: siteConfig.url,
+      logo: `${siteConfig.url}/logo.png`,
+      description: siteConfig.description,
+      address: {
+        streetAddress: "Jl. Sudirman No. 123",
+        addressLocality: "Jakarta Pusat",
+        addressRegion: "DKI Jakarta",
+        postalCode: "12345",
+        addressCountry: "ID"
+      },
+      contact: {
+        phone: siteConfig.contact.phone,
+        email: siteConfig.contact.email
+      },
+      socials: Object.values(siteConfig.socials)
+    }}
+  />
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary-50 to-primary-100 py-20">
+    <div class="container-custom">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Pilihan Paket Website
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Pilih paket yang sesuai dengan kebutuhan dan budget bisnis Anda. 
+          Semua paket sudah termasuk hosting, domain, dan maintenance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Plans -->
+  <section class="py-20 bg-white">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Starter Plan -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+            <div class="text-4xl font-bold text-primary-600 mb-1">Rp 1.500.000</div>
+            <div class="text-gray-500 mb-4">/bulan</div>
+            <p class="text-gray-600">Untuk bisnis kecil yang baru memulai</p>
+          </div>
+          
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Website responsive</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">5 halaman</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">SEO dasar</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Email support</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">SSL certificate</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Backup otomatis</span>
+            </li>
+          </ul>
+          
+          <a href="/contact" class="w-full text-center bg-gray-100 hover:bg-gray-200 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+            Pilih Paket
+          </a>
+        </div>
+
+        <!-- Professional Plan -->
+        <div class="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300 border-2 border-primary-500 relative">
+          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+            <span class="bg-primary-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              Terpopuler
+            </span>
+          </div>
+          
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Professional</h3>
+            <div class="text-4xl font-bold text-primary-600 mb-1">Rp 3.500.000</div>
+            <div class="text-gray-500 mb-4">/bulan</div>
+            <p class="text-gray-600">Untuk bisnis menengah yang sedang berkembang</p>
+          </div>
+          
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Semua fitur Starter</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">10 halaman</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Blog terintegrasi</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Contact form</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Google Analytics</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Priority support</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Custom domain</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Social media integration</span>
+            </li>
+          </ul>
+          
+          <a href="/contact" class="w-full text-center bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+            Pilih Paket
+          </a>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+            <div class="text-4xl font-bold text-primary-600 mb-1">Rp 7.500.000</div>
+            <div class="text-gray-500 mb-4">/bulan</div>
+            <p class="text-gray-600">Untuk bisnis besar dengan kebutuhan kompleks</p>
+          </div>
+          
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Semua fitur Professional</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Halaman unlimited</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">E-commerce integration</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Custom development</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">24/7 support</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Performance monitoring</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">Advanced SEO</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-gray-700">API integration</span>
+            </li>
+          </ul>
+          
+          <a href="/contact" class="w-full text-center bg-gray-100 hover:bg-gray-200 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+            Hubungi Kami
+          </a>
+        </div>
+      </div>
+      
+      <!-- FAQ Section -->
+      <div class="mt-20">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Pertanyaan Umum</h2>
+        <div class="max-w-4xl mx-auto space-y-6">
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Apakah ada biaya setup?</h3>
+            <p class="text-gray-600">Tidak ada biaya setup untuk paket Professional dan Enterprise. Untuk paket Starter dikenakan biaya setup Rp 500.000.</p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Berapa lama waktu pengerjaan?</h3>
+            <p class="text-gray-600">Starter: 3-5 hari kerja, Professional: 5-7 hari kerja, Enterprise: 7-14 hari kerja tergantung kompleksitas.</p>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Apakah ada garansi?</h3>
+            <p class="text-gray-600">Ya, kami memberikan garansi 30 hari untuk semua paket. Jika ada masalah, kami akan perbaiki gratis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

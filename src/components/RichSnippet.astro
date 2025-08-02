@@ -1,0 +1,98 @@
+---
+export interface Props {
+  type: 'Organization' | 'BlogPosting' | 'BreadcrumbList' | 'FAQPage';
+  data: any;
+}
+
+const { type, data } = Astro.props;
+
+const generateJSONLD = () => {
+  switch (type) {
+    case 'Organization':
+      return {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": data.name,
+        "url": data.url,
+        "logo": data.logo,
+        "description": data.description,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": data.address.streetAddress,
+          "addressLocality": data.address.addressLocality,
+          "addressRegion": data.address.addressRegion,
+          "postalCode": data.address.postalCode,
+          "addressCountry": data.address.addressCountry
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": data.contact.phone,
+          "contactType": "customer service",
+          "email": data.contact.email
+        },
+        "sameAs": data.socials
+      };
+    
+    case 'BlogPosting':
+      return {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": data.headline,
+        "description": data.description,
+        "image": data.image,
+        "author": {
+          "@type": "Person",
+          "name": data.author.name,
+          "url": data.author.url
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": data.publisher.name,
+          "logo": {
+            "@type": "ImageObject",
+            "url": data.publisher.logo
+          }
+        },
+        "datePublished": data.datePublished,
+        "dateModified": data.dateModified,
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": data.url
+        }
+      };
+    
+    case 'BreadcrumbList':
+      return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": data.items.map((item: any, index: number) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": item.name,
+          "item": item.url
+        }))
+      };
+    
+    case 'FAQPage':
+      return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": data.faqs.map((faq: any) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      };
+    
+    default:
+      return {};
+  }
+};
+
+const jsonLD = generateJSONLD();
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLD)} />

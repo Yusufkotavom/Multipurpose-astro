@@ -1,0 +1,9 @@
+{
+  "name": "Sample Author",
+  "bio": "This is a sample author for testing purposes",
+  "avatar": "/authors/sample-author.jpg",
+  "socials": {
+    "twitter": "https://twitter.com/sampleauthor",
+    "linkedin": "https://linkedin.com/in/sampleauthor"
+  }
+}

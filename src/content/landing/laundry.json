@@ -1,0 +1,84 @@
+{
+  "id": "laundry",
+  "name": "Laundry Express",
+  "tagline": "Laundry Kiloan Terpercaya dengan Layanan Express",
+  "description": "Layanan laundry kiloan dengan kualitas terbaik, layanan express, dan pengiriman gratis untuk area tertentu.",
+  "hero": {
+    "title": "Laundry Express",
+    "subtitle": "Layanan laundry kiloan dengan kualitas terbaik dan pengiriman gratis",
+    "cta": "Order Sekarang",
+    "image": "/landing/laundry-hero.jpg"
+  },
+  "colors": {
+    "primary": "#059669",
+    "secondary": "#047857",
+    "accent": "#ecfdf5"
+  },
+  "services": [
+    {
+      "name": "Laundry Kiloan",
+      "description": "Layanan laundry per kilo dengan kualitas terbaik",
+      "price": "Rp 8.000/kg",
+      "icon": "👕"
+    },
+    {
+      "name": "Dry Clean",
+      "description": "Cuci kering untuk pakaian khusus",
+      "price": "Rp 15.000/piece",
+      "icon": "🧥"
+    },
+    {
+      "name": "Express Service",
+      "description": "Layanan cepat selesai dalam 3 jam",
+      "price": "Rp 20.000/kg",
+      "icon": "⚡"
+    },
+    {
+      "name": "Pickup & Delivery",
+      "description": "Jemput dan antar gratis area tertentu",
+      "price": "Gratis",
+      "icon": "🚚"
+    }
+  ],
+  "whyUs": [
+    "Mesin cuci modern dan higienis",
+    "Detergen premium berkualitas",
+    "Layanan express 3 jam selesai",
+    "Pickup dan delivery gratis",
+    "Garansi jika ada kerusakan"
+  ],
+  "testimonials": [
+    {
+      "name": "Siti Nurhaliza",
+      "role": "Karyawan Kantor",
+      "content": "Laundry yang sangat bersih dan wangi. Layanan express sangat membantu untuk pakaian kerja.",
+      "rating": 5
+    },
+    {
+      "name": "Budi Santoso",
+      "role": "Mahasiswa",
+      "content": "Harga terjangkau dan kualitas bagus. Delivery gratis juga, sangat praktis!",
+      "rating": 5
+    }
+  ],
+  "contact": {
+    "phone": "+62 812-3456-7890",
+    "whatsapp": "+62 812-3456-7890",
+    "address": "Jl. Sudirman No. 123, Jakarta Pusat",
+    "hours": "Senin - Minggu: 07:00 - 21:00 WIB"
+  },
+  "faq": [
+    {
+      "question": "Berapa lama proses laundry biasa?",
+      "answer": "Proses laundry biasa memakan waktu 24-48 jam tergantung cuaca."
+    },
+    {
+      "question": "Apakah ada area delivery gratis?",
+      "answer": "Ya, kami menyediakan delivery gratis untuk area dalam radius 5 km dari outlet."
+    },
+    {
+      "question": "Apakah menerima pakaian khusus?",
+      "answer": "Ya, kami menerima pakaian khusus seperti jas, gaun, dan pakaian formal dengan layanan dry clean."
+    }
+  ]
+}

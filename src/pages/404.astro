@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import siteConfig from '../../config/site.config';
+
+const pageTitle = "Halaman Tidak Ditemukan";
+const pageDescription = "Maaf, halaman yang Anda cari tidak ditemukan.";
+---
+
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  type="website"
+>
+  <section class="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center">
+    <div class="container-custom text-center">
+      <div class="max-w-2xl mx-auto">
+        <!-- 404 Icon -->
+        <div class="mb-8">
+          <div class="text-9xl font-bold text-primary-600 mb-4">404</div>
+          <div class="text-6xl mb-4">😕</div>
+        </div>
+        
+        <!-- Content -->
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Halaman Tidak Ditemukan
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Maaf, halaman yang Anda cari tidak ditemukan atau telah dipindahkan.
+        </p>
+        
+        <!-- Actions -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <a href="/" class="btn-primary">
+            Kembali ke Beranda
+          </a>
+          <a href="/contact" class="btn-secondary">
+            Hubungi Kami
+          </a>
+        </div>
+        
+        <!-- Popular Pages -->
+        <div class="bg-white rounded-xl p-8 shadow-lg">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">
+            Halaman Populer
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a href="/about" class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+              <h3 class="font-semibold text-gray-900 mb-1">Tentang Kami</h3>
+              <p class="text-sm text-gray-600">Pelajari lebih lanjut tentang tim kami</p>
+            </a>
+            <a href="/pricing" class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+              <h3 class="font-semibold text-gray-900 mb-1">Harga & Paket</h3>
+              <p class="text-sm text-gray-600">Lihat pilihan paket website kami</p>
+            </a>
+            <a href="/blog" class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+              <h3 class="font-semibold text-gray-900 mb-1">Blog</h3>
+              <p class="text-sm text-gray-600">Baca artikel terbaru kami</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
